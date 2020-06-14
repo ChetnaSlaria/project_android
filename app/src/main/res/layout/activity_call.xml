@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_call_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient">
+
+
+    <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/girl" />
+
+    <ImageView
+            android:id="@+id/blur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlackTransaparent"
+            android:scaleType="centerCrop" />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <com.skyfishjy.library.RippleBackground
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                app:rb_duration="3000"
+                app:rb_radius="32dp"
+                app:rb_color="@color/colorPrimary"
+                app:rb_rippleAmount="4"
+                app:rb_scale="6">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circular_userPic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/girl9" />
+        </com.skyfishjy.library.RippleBackground>
+
+
+        <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:text="name"
+                android:textColor="@color/colorWhiteLight"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        <TextView
+                android:id="@+id/tvCallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvUserName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="Incoming Call"
+                android:textColor="@color/colorWhiteLight"
+                android:textSize="@dimen/text18"
+                android:visibility="gone" />
+
+        <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/margin32"
+                android:orientation="horizontal">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/hangUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/margin32"
+                    android:src="@drawable/ic_call_end_24dp"
+                    app:backgroundTint="@color/purple_light"
+                    app:fabSize="normal" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/acceptCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/margin32"
+                    android:src="@drawable/ic_call_24dp"
+                    app:backgroundTint="@color/light_green"
+                    app:fabSize="normal" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

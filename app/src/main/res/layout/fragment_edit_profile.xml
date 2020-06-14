@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fragmentRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg1"
+        android:orientation="vertical">
+
+    <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:layout_constraintTop_toTopOf="parent" />
+<ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:layout_margin="@dimen/_8sdp"
+        app:layout_constraintTop_toTopOf="@id/view"
+
+        app:layout_constraintStart_toStartOf="@id/view"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin16"
+            android:text="Edit Profile"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text20"
+            app:layout_constraintEnd_toEndOf="@id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toTopOf="@id/view" />
+
+    <TextView
+            android:id="@+id/edit_profileDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin8"
+            android:padding="@dimen/margin8"
+            android:text="Done"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/imagesView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/margin8"
+                    android:padding="@dimen/_8sdp"
+                    app:layout_constraintHeight_percent="0.28"
+                    app:layout_constraintTop_toTopOf="parent">
+                <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:src="@drawable/girl4"
+                        android:scaleType="centerCrop"
+                        app:riv_mutate_background="true"
+                        android:id="@+id/image1"
+                        app:riv_corner_radius="@dimen/_8sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/image3"
+                        app:layout_constraintEnd_toEndOf="@id/image5"
+                        app:layout_constraintStart_toStartOf="@id/image4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        />
+                <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                        app:riv_mutate_background="true"
+                        android:id="@+id/image2"
+                        app:riv_corner_radius="@dimen/_8sdp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.33"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.32"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/margin4"
+                        android:background="@drawable/add_image_icon"
+                        />
+                <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                        app:riv_mutate_background="true"
+                        android:id="@+id/image3"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/margin4"
+                        app:riv_corner_radius="@dimen/_8sdp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.33"
+                        app:layout_constraintTop_toBottomOf="@id/image2"
+                        app:layout_constraintWidth_percent="0.32"
+                        android:background="@drawable/add_image_icon"
+                        />
+                <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                        app:riv_mutate_background="true"
+                        android:id="@+id/image4"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/margin4"
+                        app:riv_corner_radius="@dimen/_8sdp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toStartOf="@id/image5"
+                        app:layout_constraintHeight_percent="0.33"
+                        app:layout_constraintTop_toBottomOf="@id/image3"
+                        app:layout_constraintWidth_percent="0.32"
+                        android:background="@drawable/add_image_icon"
+                        />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                        app:riv_mutate_background="true"
+                        android:id="@+id/image5"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/margin4"
+                        app:riv_corner_radius="@dimen/_8sdp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toStartOf="@id/image6"
+                        app:layout_constraintHeight_percent="0.33"
+                        app:layout_constraintTop_toBottomOf="@id/image3"
+                        app:layout_constraintWidth_percent="0.32"
+                        android:background="@drawable/add_image_icon"
+                        />
+                <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                        app:riv_mutate_background="true"
+                        android:id="@+id/image6"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/margin4"
+                        app:riv_corner_radius="@dimen/_8sdp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.33"
+                        app:layout_constraintTop_toBottomOf="@id/image3"
+                        app:layout_constraintWidth_percent="0.32"
+                        android:background="@drawable/add_image_icon"
+                        />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                    android:id="@+id/aboutView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:elevation="@dimen/margin8"
+                    app:layout_constraintTop_toBottomOf="@id/imagesView">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin12">
+
+                    <Switch
+                            android:id="@+id/editProfile_private"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:text="Private pictures"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/text14"
+                            android:textStyle="bold" />
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profileHighlight"
+        android:layout_marginTop="@dimen/margin16">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/name"
+            android:drawablePadding="@dimen/_4sdp"
+            android:drawableTint="@color/colorLightYellow"
+            android:text="Profile Highlight"
+            android:textColor="@color/colorLightYellow"
+            android:textSize="@dimen/text14"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap here"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:textColor="@color/colorGrey"/>
+
+</LinearLayout>
+                    <TextView
+                            android:id="@+id/edit_profile_highlight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:padding="@dimen/_2sdp"
+                            android:visibility="gone"
+                            android:textColor="@color/colorLightYellow"
+                            android:textColorHint="@color/colorGrey"
+                            android:textSize="@dimen/text14" />
+                  <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:id="@+id/aboutMe"
+                          android:layout_marginTop="16dp">
+                      <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:drawableLeft="@drawable/profile1"
+                              android:drawablePadding="@dimen/_4sdp"
+                              android:drawableTint="@color/colorPurple"
+                              android:text="About Me"
+                              android:textColor="@color/colorPurple"
+                              android:textSize="@dimen/text14"
+                              android:textStyle="bold" />
+                      <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="Tap here"
+                              android:layout_weight="1"
+                              android:gravity="end"
+                              android:textColor="@color/colorGrey"/>
+
+                  </LinearLayout>
+
+                    <TextView
+                            android:id="@+id/edit_about_me"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                           android:visibility="gone"
+                            android:padding="@dimen/_2sdp"
+                            android:textColor="@color/colorPurple"
+                            android:textColorHint="@color/colorGrey"
+                            android:textSize="@dimen/text14" />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin16"
+                            android:id="@+id/aboutMyFamily">
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:drawableLeft="@drawable/living_with_family"
+                                android:drawablePadding="@dimen/_4sdp"
+                                android:text="About My Family"
+                                android:textColor="@color/colorGreen"
+                                android:textSize="@dimen/text14"
+                                android:textStyle="bold" />
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tap here"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:textColor="@color/colorGrey"/>
+                    </LinearLayout>
+
+
+                    <TextView
+                            android:id="@+id/edit_about_family"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:visibility="gone"
+                            android:textColor="@color/colorGreen"
+                            android:textColorHint="@color/colorGrey"
+                            android:textSize="@dimen/text14" />
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin16"
+        android:id="@+id/aboutImLookingFor">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:drawableLeft="@drawable/eye"
+            android:drawablePadding="@dimen/_4sdp"
+            android:drawableTint="@color/colorYellow"
+            android:text="What I am looking for"
+            android:textColor="@color/colorYellow"
+            android:textSize="@dimen/text14"
+            android:textStyle="bold" />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap here"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:textColor="@color/colorGrey"/>
+</LinearLayout>
+
+
+                    <TextView
+                            android:id="@+id/looking_for"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+android:visibility="gone"
+                            android:padding="@dimen/_2sdp"
+                            android:textColor="@color/colorYellow"
+                            android:textColorHint="@color/colorGrey"
+                            android:textSize="@dimen/text14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/basicInfoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin12"
+                    app:layout_constraintTop_toBottomOf="@id/aboutView">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/name"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:drawableTint="@color/colorWhite"
+
+                        android:text="Username"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_username"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                        android:id="@+id/edit_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Simona"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorGrey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/birthdat"
+                        android:drawablePadding="@dimen/_4sdp"
+
+                        android:text="Birthday"
+                        android:textColor="@color/colorPurple"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_dob"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                        android:id="@+id/edit_dob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_8sdp"
+                        android:hint="April,19,1988"
+
+                        android:textColor="@color/colorPurple"
+                        android:textColorHint="@color/colorGrey"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/edit_username" />
+
+                <TextView
+                        android:id="@+id/text_nationality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/nationality"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:drawableTint="@color/colorSkyBlue"
+                        android:text="Nationality"
+                        android:textColor="@color/colorSkyBlue"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_nationality" />
+
+                <TextView
+                        android:id="@+id/edit_nationality"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin8"
+                        android:entries="@array/nationality"
+                        android:gravity="end"
+                        android:hint="Tap here"
+
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:textColor="@color/colorSkyBlue"
+                        android:textColorHint="@color/colorGrey"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/text_nationality"
+                        app:layout_constraintTop_toBottomOf="@id/edit_dob" />
+
+
+                <TextView
+                        android:id="@+id/text_origin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/origion"
+                        android:drawablePadding="@dimen/_4sdp"
+
+                        android:text="Origin"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintBaseline_toBaselineOf="@id/edit_origin"/>
+
+                <TextView
+                        android:id="@+id/edit_origin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/nationality"
+                        android:gravity="end"
+                        android:hint="Tap Here"
+                     android:layout_marginTop="@dimen/_8sdp"
+                        android:textColor="@color/colorGreen"
+                        android:textColorHint="@color/colorGrey"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="@id/edit_nationality"
+                        app:layout_constraintStart_toStartOf="@id/edit_nationality"
+                        app:layout_constraintTop_toBottomOf="@id/edit_nationality" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/langues"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:text="Language"
+                        android:textColor="@color/colorOrange"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_languages"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                        android:id="@+id/edit_languages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="English"
+                      android:layout_marginTop="@dimen/_8sdp"
+                        android:textColor="@color/colorOrange"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="@id/edit_nationality"
+                        app:layout_constraintTop_toBottomOf="@id/edit_origin" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Marital Status"
+                        android:textColor="@color/colorPurple"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_marital_status"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                        android:id="@+id/edit_marital_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/_8sdp"
+                        android:hint="Tap Here"
+                        android:textColorHint="@color/colorGrey"
+                        android:textColor="@color/colorPurple"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="@id/edit_nationality"
+                        app:layout_constraintTop_toBottomOf="@id/caste_group" />
+
+                <RadioGroup
+                        android:id="@+id/relationship"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/edit_marital_status">
+
+                    <RadioButton
+                            android:id="@+id/single_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin8"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:checked="true"
+                            android:padding="@dimen/margin8"
+                            android:text="Single"
+                            android:drawablePadding="@dimen/_4sdp"
+                            android:drawableLeft="@drawable/single"
+                            android:textColor="@drawable/text_selector" />
+
+                    <RadioButton
+                            android:id="@+id/divorced_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin8"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:padding="@dimen/margin8"
+                            android:text="Divorced"
+                            android:drawablePadding="@dimen/_4sdp"
+                            android:drawableLeft="@drawable/divorced"
+                            android:textColor="@drawable/text_selector" />
+
+                    <RadioButton
+                            android:id="@+id/widowed_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin8"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:padding="@dimen/margin8"
+                            android:text="Widowed"
+                            android:drawablePadding="@dimen/_4sdp"
+                            android:drawableLeft="@drawable/windowed"
+                            android:textColor="@drawable/text_selector" />
+
+                    <RadioButton
+                            android:id="@+id/annulled_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin8"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:padding="@dimen/margin8"
+                            android:text="Annulled"
+                            android:drawablePadding="@dimen/_4sdp"
+                            android:drawableLeft="@drawable/annulled"
+                            android:textColor="@drawable/text_selector" />
+                </RadioGroup>
+
+                <TextView
+                        android:id="@+id/living_arrangement"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Current Living Arrangements"
+                        android:textColor="@color/colorOrange"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/relationship"
+                        app:layout_constraintWidth_percent="0.4" />
+
+
+                <TextView
+                        android:id="@+id/edit_living_arrangement"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin4"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorOrange"
+                        android:textColorHint="@color/colorGrey"
+                        android:textSize="@dimen/text14"
+                        android:hint="Tap Here"
+                        android:gravity="end"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/living_arrangement"
+                        app:layout_constraintEnd_toEndOf="@id/edit_nationality"
+                        app:layout_constraintStart_toEndOf="@id/living_arrangement"
+                        app:layout_constraintTop_toTopOf="@id/living_arrangement" />
+
+                <RadioGroup
+                        android:id="@+id/living_arrangement_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/edit_living_arrangement">
+
+                    <RadioButton
+                            android:id="@+id/living_alone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:checked="true"
+                            android:drawableLeft="@drawable/living_alone"
+                            android:gravity="center"
+                            android:padding="@dimen/margin8"
+                            android:text="Living Alone"
+                            android:textColor="@drawable/text_selector" />
+
+                    <RadioButton
+                            android:id="@+id/living_family"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/living_with_family"
+                            android:gravity="center"
+                            android:padding="@dimen/margin8"
+                            android:text="living with Family"
+                            android:textColor="@drawable/text_selector" />
+
+                    <RadioButton
+                            android:id="@+id/living_friends"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/living_with_friend"
+                            android:gravity="center"
+                            android:padding="@dimen/margin8"
+                            android:text="Living with Friends"
+                            android:textColor="@drawable/text_selector" />
+
+                    <RadioButton
+                            android:id="@+id/living_other"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/other"
+                            android:gravity="center"
+                            android:padding="@dimen/margin8"
+                            android:text="Other"
+                            android:textColor="@drawable/text_selector" />
+                </RadioGroup>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/sunni"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:drawableTint="@color/colorYellow"
+                        android:text="Sect"
+                        android:textColor="@color/colorYellow"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_cast"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                        android:id="@+id/edit_cast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_8sdp"
+                        android:hint="Tap Here"
+                        android:textColor="@color/colorYellow"
+                        android:textColorHint="@color/colorGrey"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/edit_languages" />
+
+                <RadioGroup
+                        android:id="@+id/caste_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/edit_cast">
+
+                    <RadioButton
+                            android:id="@+id/caste_sunni"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/sunni"
+                            android:gravity="center"
+                            android:text="Sunni"
+                            android:textColor="@drawable/text_selector" />
+
+                    <RadioButton
+                            android:id="@+id/caste_shia"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/shia"
+                            android:gravity="center"
+                            android:text="Shia "
+                            android:textColor="@drawable/text_selector" />
+
+                    <RadioButton
+                            android:id="@+id/caste_other"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/other2"
+                            android:gravity="center"
+                            android:text="Other"
+                            android:textColor="@drawable/text_selector" />
+                </RadioGroup>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/appearanceView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin12"
+                    app:layout_constraintTop_toBottomOf="@id/basicInfoView">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/height"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:text="Height"
+                        android:textColor="@color/colorSkyBlue"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_height"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                        android:id="@+id/edit_height"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Tap Here"
+                        android:textColorHint="@color/colorGrey"
+                        android:textColor="@color/colorSkyBlue"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <SeekBar
+                        android:id="@+id/height_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin8"
+                        android:max="230"
+                        android:min="137"
+                        android:progress="140"
+                        android:thumb="@drawable/seek"
+                        android:thumbTint="@color/selected1"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/edit_height" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/complexion"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:text="Complexion"
+                        android:textColor="@color/colorOrange"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_complexion"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                        android:id="@+id/edit_complexion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:entries="@array/colorComplexion"
+               android:layout_marginTop="@dimen/_8sdp"
+                        android:hint="Tap here"
+                        android:textColorHint="@color/colorGrey"
+                        android:textColor="@color/colorOrange"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="@id/edit_height"
+                        app:layout_constraintTop_toBottomOf="@id/build_bar" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/eye"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:text="Eye Color"
+                        android:textColor="@color/colorYellow"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_eyes_color"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                        android:id="@+id/edit_eyes_color"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin4"
+                        android:entries="@array/eyeColor"
+                        android:gravity="end"
+                       android:layout_marginTop="@dimen/_8sdp"
+                        android:hint="Tap here"
+                        android:textColorHint="@color/colorGrey"
+                        android:textColor="@color/colorYellow"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="@id/edit_height"
+                        app:layout_constraintTop_toBottomOf="@id/edit_complexion" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/hair"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:text="Hair Color"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_hair_color"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                        android:id="@+id/edit_hair_color"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin4"
+                        android:entries="@array/hairColor"
+                        android:gravity="end"
+                        android:hint="Tap here"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:textColorHint="@color/colorGrey"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="@id/edit_height"
+                        app:layout_constraintTop_toBottomOf="@id/edit_eyes_color" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/athletic"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:text="Build"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_build"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                        android:id="@+id/edit_build"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin4"
+                        android:gravity="end"
+                       android:layout_marginTop="@dimen/_8sdp"
+                        android:hint="Tap here"
+                        android:textColorHint="@color/colorGrey"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="@id/edit_height"
+                        app:layout_constraintTop_toBottomOf="@id/height_bar" />
+
+                <RadioGroup
+                        android:id="@+id/build_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/edit_build">
+
+                    <RadioButton
+                            android:id="@+id/weight_athletic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:checked="true"
+                            android:drawableLeft="@drawable/athletic"
+                            android:gravity="center"
+                            android:padding="@dimen/margin8"
+                            android:text="Athletic"
+                            android:textColor="@drawable/text_selector" />
+
+                    <RadioButton
+                            android:id="@+id/weight_slim"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/slim"
+                            android:gravity="center"
+                            android:padding="@dimen/margin8"
+                            android:text="Slim"
+                            android:textColor="@drawable/text_selector" />
+
+                    <RadioButton
+                            android:id="@+id/weight_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/medium"
+                            android:gravity="center"
+                            android:padding="@dimen/margin8"
+                            android:text="Medium"
+                            android:textColor="@drawable/text_selector" />
+
+                    <RadioButton
+                            android:id="@+id/weight_large"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/large"
+                            android:gravity="center"
+                            android:padding="@dimen/margin8"
+                            android:text="Large"
+                            android:textColor="@drawable/text_selector" />
+
+
+                </RadioGroup>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/professionalView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin12"
+                    app:layout_constraintTop_toBottomOf="@id/appearanceView">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/education"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:drawableTint="@color/colorGreen"
+                        android:text="Education"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_education"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                        android:id="@+id/edit_education"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                      android:layout_marginTop="@dimen/_8sdp"
+
+                        android:hint="Tap Here"
+                        android:textColorHint="@color/colorGrey"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/profession"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:text="Profession"
+                        android:textColor="@color/colorOrange"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_profession"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                        android:id="@+id/edit_profession"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Job Title"
+                        android:gravity="end"
+                       android:layout_marginTop="@dimen/_8sdp"
+                        android:textColor="@color/colorOrange"
+                        android:textColorHint="@color/colorGrey"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/edit_education" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/plan_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin12"
+                    app:layout_constraintTop_toBottomOf="@id/professionalView">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Marriage Plans"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_marriage_plan"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                        android:id="@+id/edit_marriage_plan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:hint="Tap here"
+                        android:textColorHint="@color/colorGrey"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioGroup
+                        android:id="@+id/marriage_plan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/edit_marriage_plan">
+
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin8"
+                            android:layout_weight="1"
+                            android:drawablePadding="4dp"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/small"
+                            android:gravity="center"
+                            android:padding="@dimen/margin8"
+                            android:text="Small"
+                            android:textColor="@drawable/text_selector" />
+
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin8"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/destination"
+                            android:gravity="center"
+                            android:padding="@dimen/margin8"
+                            android:text="Destination"
+                            android:drawablePadding="4dp"
+                            android:textColor="@drawable/text_selector" />
+
+                    <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin8"
+                            android:layout_weight="1"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/traditional"
+                            android:gravity="center"
+                            android:padding="@dimen/margin8"
+                            android:drawablePadding="4dp"
+                            android:text="Traditional"
+                            android:textColor="@drawable/text_selector" />
+                </RadioGroup>
+
+                <LinearLayout
+                        android:id="@+id/life_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/marriage_plan">
+
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+
+                            android:text="Living Arrangements After Marriage"
+                            android:textColor="@color/colorSkyBlue"
+                            android:textSize="@dimen/text14"
+                            app:layout_constraintBaseline_toBaselineOf="@id/edit_lifeaftermarriage" />
+
+                    <TextView
+                            android:id="@+id/edit_lifeaftermarriage"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/margin4"
+                            android:layout_weight="2"
+                            android:gravity="end"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:hint="Tap Here"
+                            android:textColorHint="@color/colorGrey"
+                            android:textColor="@color/colorSkyBlue"
+                            android:textSize="@dimen/text14" />
+
+                </LinearLayout>
+
+                <RadioGroup
+                        android:id="@+id/life_after_marriage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin8"
+                        android:gravity="center|center_vertical"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/life_layout">
+
+                    <RadioButton
+                            android:id="@+id/after_marriagr_stay_with_parents"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:checked="true"
+                            android:drawablePadding="4dp"
+                            android:drawableLeft="@drawable/stay_with_parents"
+                            android:gravity="center"
+                            android:padding="@dimen/margin8"
+                            android:text="Stay with Parents"
+                            android:textColor="@drawable/text_selector" />
+
+                    <RadioButton
+                            android:id="@+id/after_marriage_willing_to_relocate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/willing_to_relocate"
+                            android:gravity="center"
+                            android:padding="@dimen/margin8"
+                            android:drawablePadding="4dp"
+                            android:text="Willing to relocate"
+                            android:textColor="@drawable/text_selector" />
+
+                    <RadioButton
+                            android:id="@+id/after_marriage_live_separately"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/live_separately"
+                            android:gravity="center"
+                            android:padding="@dimen/margin8"
+                            android:drawablePadding="4dp"
+                            android:text="Live Separately"
+                            android:textColor="@drawable/text_selector" />
+                </RadioGroup>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/last"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin8"
+                    app:layout_constraintTop_toBottomOf="@id/plan_view">
+
+                <TextView
+                        android:id="@+id/text_wear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin12"
+                        android:text="Wear"
+                        android:textColor="@color/colorOrange"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBottom_toBottomOf="@id/wear_radio_group"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/wear_radio_group" />
+
+                <RadioGroup
+                        android:id="@+id/wear_radio_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin4"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/text_wear"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <RadioButton
+                            android:id="@+id/hijab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/hijab"
+                            android:gravity="center"
+                            android:text="Hijab"
+                            android:drawablePadding="4dp"
+                            android:textColor="@drawable/text_selector"
+                            android:textSize="@dimen/text14" />
+
+                    <RadioButton
+                            android:id="@+id/naqab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/naqab"
+                            android:gravity="center"
+                            android:text="Naqab"
+                            android:drawablePadding="4dp"
+                            android:textColor="@drawable/text_selector"
+                            android:textSize="@dimen/text14" />
+                </RadioGroup>
+
+                <TextView
+                        android:id="@+id/text_beard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Beard"
+                        android:textColor="@color/colorLightYellow"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBottom_toBottomOf="@id/beard_radio_group"
+                        app:layout_constraintStart_toStartOf="@id/text_wear"
+                        app:layout_constraintTop_toTopOf="@id/beard_radio_group" />
+
+                <RadioGroup
+                        android:id="@+id/beard_radio_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin4"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/text_beard"
+                        app:layout_constraintTop_toBottomOf="@id/wear_radio_group">
+
+                    <RadioButton
+                            android:id="@+id/beard_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/yes"
+                            android:drawablePadding="4dp"
+                            android:gravity="center"
+                            android:text="Yes"
+                            android:textColor="@drawable/text_selector"
+                            android:textSize="@dimen/text14" />
+
+                    <RadioButton
+                            android:id="@+id/beard_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/no"
+                            android:gravity="center"
+                            android:text="No"
+                            android:drawablePadding="4dp"
+                            android:textColor="@drawable/text_selector"
+                            android:textSize="@dimen/text14" />
+                </RadioGroup>
+
+                <TextView
+                        android:id="@+id/text_revert"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Revert"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBottom_toBottomOf="@id/revert_radio_group"
+                        app:layout_constraintStart_toStartOf="@id/text_wear"
+                        app:layout_constraintTop_toTopOf="@id/revert_radio_group" />
+
+                <RadioGroup
+                        android:id="@+id/revert_radio_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin4"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/text_revert"
+                        app:layout_constraintTop_toBottomOf="@id/beard_radio_group">
+
+                    <RadioButton
+                            android:id="@+id/revert_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/yes"
+                            android:gravity="center"
+                            android:text="Yes"
+                            android:drawablePadding="4dp"
+                            android:textColor="@drawable/text_selector"
+                            android:textSize="@dimen/text14" />
+
+                    <RadioButton
+                            android:id="@+id/revert_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/no"
+                            android:gravity="center"
+                            android:text="No"
+                            android:drawablePadding="4dp"
+                            android:textColor="@drawable/text_selector"
+                            android:textSize="@dimen/text14" />
+                </RadioGroup>
+
+                <TextView
+                        android:id="@+id/text_halal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Halal"
+                        android:textColor="@color/selected1"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBottom_toBottomOf="@id/halal_radio_group"
+                        app:layout_constraintStart_toStartOf="@id/text_wear"
+                        app:layout_constraintTop_toTopOf="@id/halal_radio_group" />
+
+                <RadioGroup
+                        android:id="@+id/halal_radio_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin4"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/text_beard"
+                        app:layout_constraintTop_toBottomOf="@id/revert_radio_group">
+
+                    <RadioButton
+                            android:id="@+id/halal_always"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/always"
+                            android:gravity="center"
+                            android:text="Always"
+                            android:drawablePadding="4dp"
+                            android:textColor="@drawable/text_selector"
+                            android:textSize="@dimen/text14" />
+
+                    <RadioButton
+                            android:id="@+id/halal_sometimes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/sometimes"
+                            android:gravity="center"
+                            android:text="Sometimes"
+                            android:drawablePadding="4dp"
+                            android:textColor="@drawable/text_selector"
+                            android:textSize="@dimen/text14" />
+
+                    <RadioButton
+                            android:id="@+id/halal_never"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/never"
+                            android:gravity="center"
+                            android:text="Never"
+                            android:drawablePadding="4dp"
+                            android:textColor="@drawable/text_selector"
+                            android:textSize="@dimen/text14" />
+                </RadioGroup>
+
+                <TextView
+                        android:id="@+id/text_prays"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Prays"
+
+                        android:textColor="@color/colorSkyBlue"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBottom_toBottomOf="@id/prays_radio_group"
+                        app:layout_constraintStart_toStartOf="@id/text_wear"
+                        app:layout_constraintTop_toTopOf="@id/prays_radio_group" />
+
+                <RadioGroup
+                        android:id="@+id/prays_radio_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin4"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/text_prays"
+                        app:layout_constraintTop_toBottomOf="@id/halal_radio_group">
+
+                    <RadioButton
+                            android:id="@+id/prays_always"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/always"
+                            android:gravity="center"
+                            android:text="Always"
+                            android:drawablePadding="4dp"
+                            android:textColor="@drawable/text_selector"
+                            android:textSize="@dimen/text14" />
+
+                    <RadioButton
+                            android:id="@+id/prays_sometimes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/sometimes"
+                            android:gravity="center"
+                            android:text="Sometimes"
+                            android:drawablePadding="4dp"
+                            android:textColor="@drawable/text_selector"
+                            android:textSize="@dimen/text14" />
+
+                </RadioGroup>
+
+                <TextView
+                        android:id="@+id/text_quran"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Completed Quran"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBottom_toBottomOf="@id/quran_radio_group"
+                        app:layout_constraintStart_toStartOf="@id/text_wear"
+                        app:layout_constraintTop_toTopOf="@id/quran_radio_group" />
+
+                <RadioGroup
+                        android:id="@+id/quran_radio_group"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin4"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/text_quran"
+                        app:layout_constraintTop_toBottomOf="@id/prays_radio_group">
+
+                    <RadioButton
+                            android:id="@+id/quran_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/yes"
+                            android:gravity="center"
+                            android:text="Yes"
+                            android:drawablePadding="4dp"
+                            android:textColor="@drawable/text_selector"
+                            android:textSize="@dimen/text14" />
+
+                    <RadioButton
+                            android:id="@+id/quran_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/margin4"
+                            android:background="@drawable/radio_select"
+                            android:button="@android:color/transparent"
+                            android:drawableLeft="@drawable/no"
+                            android:gravity="center"
+                            android:text="No"
+                            android:drawablePadding="4dp"
+                            android:textColor="@drawable/text_selector"
+                            android:textSize="@dimen/text14" />
+
+                </RadioGroup>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

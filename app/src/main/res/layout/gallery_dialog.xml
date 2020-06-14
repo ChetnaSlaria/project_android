@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:elevation="8dp"
+        android:layout_margin="@dimen/margin8"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Select Image From : "
+                      android:textColor="@color/colorWhite"
+                      android:textSize="@dimen/text18"
+                      android:gravity="center"
+                      android:fontFamily="@font/sf_semibold"
+                      android:textStyle="bold"
+                      android:layout_margin="@dimen/margin8"
+            />
+            <View android:layout_width="match_parent"
+                  android:layout_height="0.4dp"
+                  android:background="@color/textColorLight"
+                  android:layout_marginStart="@dimen/margin8"
+                  android:layout_marginEnd="@dimen/margin8"
+                  android:layout_marginTop="@dimen/margin8"/>
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Camera"
+                      android:fontFamily="@font/sf_regular"
+                      android:textSize="@dimen/text16"
+                    android:padding="@dimen/margin4"
+                      android:textColor="@color/colorWhiteLight"
+                      android:layout_margin="8dp"
+                      android:textAlignment="center"
+                      android:id="@+id/dialog_text_camera"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="0.5dp"
+                  android:layout_marginStart="@dimen/margin8"
+                  android:layout_marginEnd="@dimen/margin8"
+                  android:background="@color/textColorLight"/>
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Gallery"
+                      android:textColor="@color/colorWhiteLight"
+                      android:fontFamily="@font/sf_regular"
+                      android:textSize="@dimen/text16"
+                    android:padding="@dimen/margin4"
+                      android:layout_marginTop="8dp"
+                      android:layout_marginBottom="8dp"
+                      android:textAlignment="center"
+                      android:id="@+id/dialog_text_gallery"/>
+        </LinearLayout>
+
+

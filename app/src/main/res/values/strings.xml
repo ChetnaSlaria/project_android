@@ -1,0 +1,109 @@
+<resources>
+    <string name="comet_api_key">762f46f37eacbde1126d688a27f2e9da694748e3</string>
+    <string name="comet_app_id">18325a86af35089</string>
+    <string name="app_name">BLUB</string>
+    <string name="facebook_app_id">211664270036225</string>
+    <string name="fb_login_protocol_scheme">fb507705326678778</string>
+    <string name="firebase_server_key">AIzaSyBz_eG27R6ljXxBhtw-OiNFCvyxRULdayw</string>
+
+    <string-array name="nationality">
+        <item>America</item>
+        <item>Canada</item>
+        <item>India</item>
+        <item>Kuwait</item>
+        <item>UAE</item>
+        <item>Mexico</item>
+        <item>Iran</item>
+        <item>Australia</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="language">
+        <item>English(US)</item>
+        <item>English(UK)</item>
+        <item>Arabic</item>
+        <item>Hindi</item>
+        <item>Mexican</item>
+        <item>Spanish</item>
+        <item>French</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="colorComplexion">
+        <item>Light</item>
+        <item>Pale White</item>
+        <item>White</item>
+        <item>Fair</item>
+        <item>Medium</item>
+        <item>Moderate Brown</item>
+        <item>Dark Brown</item>
+        <item>Black</item>
+    </string-array>
+    <string-array name="eyeColor">
+
+        <item>Brown</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Black</item>
+        <item>Other</item>
+
+    </string-array>
+    <string-array name="hairColor">
+        <item>Brown</item>
+        <item>Blonde</item>
+        <item>Black</item>
+        <item>Grey</item>
+        <item>Ginger</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="education">
+        <item>High School</item>
+        <item>College</item>
+        <item>In Graduation</item>
+        <item>Graduated</item>
+        <item>Masters</item>
+    </string-array>
+
+  <!--  <string-array name="marital_status">
+        <item>High School</item>
+        <item>College</item>
+        <item>In Graduation</item>
+        <item>Graduated</item>
+        <item>Masters</item>
+    </string-array>-->
+
+    <string-array name="marriage_plans">
+        <item>Small</item>
+        <item>Destination</item>
+        <item>Traditional</item>
+    </string-array>
+
+    <string-array name="after_marriage_plans">
+        <item>Stay with Parents</item>
+        <item>Willing to relocate</item>
+        <item>Live Separately</item>
+    </string-array>
+<string-array name="prays">
+        <item>Always</item>
+        <item>Sometimes</item>
+    </string-array>
+
+
+<string-array name="halal">
+        <item>Always</item>
+        <item>Sometimes</item>
+        <item>Never</item>
+    </string-array>
+<string-array name="wear">
+        <item>Hijab</item>
+        <item>Naqab</item>
+    </string-array>
+
+    <string-array name="profession">
+    <item>Doctor</item>
+    <item>Engineer</item>
+    <item>Businessman</item>
+    <item>Govt. Employee</item>
+    <item>Other</item>
+</string-array>
+</resources>
+
+

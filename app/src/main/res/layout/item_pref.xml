@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/view"
+        android:background="@drawable/unselected"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin4">
+
+    <TextView
+            android:id="@+id/pref_name"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/_4sdp"
+            android:padding="@dimen/_2sdp"
+            android:layout_gravity="center|center_horizontal"
+            android:text="Selected"
+            android:textColor="@color/colorGrey"
+            android:textSize="@dimen/text14" />
+
+</RelativeLayout>

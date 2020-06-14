@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:visibility="gone"
+            android:layout_height="60dp"
+            android:src="@drawable/btn_filter"
+            android:padding="@dimen/margin8"
+            app:civ_circle_background_color="@android:color/transparent"
+            android:layout_margin="@dimen/margin12"
+            app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/home_sort"/>
+
+
+    <com.yuyakaido.android.cardstackview.CardStackView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="@dimen/margin8"
+            android:id="@+id/streamingCardStackView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/home_sort"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView android:layout_width="140dp"
+              android:layout_height="wrap_content"
+              android:elevation="@dimen/margin8"
+              android:fontFamily="@font/sf_bold"
+              android:background="@drawable/like_bg"
+              android:text="LIKE"
+              android:visibility="gone"
+              android:rotation="340"
+              android:gravity="center"
+              android:id="@+id/like_text"
+              android:textSize="@dimen/margin24"
+              android:textColor="@color/colorPrimaryDark"
+              android:padding="@dimen/margin8"
+              app:layout_constraintTop_toTopOf="@id/streamingCardStackView"
+              app:layout_constraintBottom_toBottomOf="@id/streamingCardStackView"
+              app:layout_constraintEnd_toEndOf="@id/streamingCardStackView"
+              app:layout_constraintStart_toStartOf="@id/streamingCardStackView"
+    />
+    <TextView android:layout_width="180dp"
+              android:layout_height="wrap_content"
+              android:background="@drawable/like_bg"
+             android:backgroundTint="@color/textColorLight"
+              android:fontFamily="@font/sf_bold"
+              android:text="SUPERLIKE"
+              android:elevation="@dimen/margin8"
+              android:visibility="gone"
+              android:id="@+id/superlike_text"
+              android:gravity="center"
+              android:textSize="@dimen/margin24"
+              android:textColor="@color/colorPrimary"
+              android:padding="@dimen/margin8"
+              app:layout_constraintTop_toTopOf="@id/streamingCardStackView"
+              app:layout_constraintBottom_toBottomOf="@id/streamingCardStackView"
+              app:layout_constraintEnd_toEndOf="@id/streamingCardStackView"
+              app:layout_constraintStart_toStartOf="@id/streamingCardStackView"/>
+
+    <TextView android:layout_width="180dp"
+              android:layout_height="wrap_content"
+              android:background="@drawable/like_bg"
+              android:backgroundTint="@color/red_600"
+              android:fontFamily="@font/sf_bold"
+              android:text="UNLIKE"
+              android:elevation="@dimen/margin8"
+              android:id="@+id/unlike_text"
+              android:rotation="30"
+              android:gravity="center"
+              android:visibility="gone"
+              android:textSize="@dimen/margin24"
+              android:textColor="@color/red_600"
+              android:padding="@dimen/margin8"
+              app:layout_constraintTop_toTopOf="@id/streamingCardStackView"
+              app:layout_constraintBottom_toBottomOf="@id/streamingCardStackView"
+              app:layout_constraintEnd_toEndOf="@id/streamingCardStackView"
+              app:layout_constraintStart_toStartOf="@id/streamingCardStackView"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/header"
+            android:elevation="@dimen/margin8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/tab_icons"
+                android:padding="8dp"
+                android:elevation="@dimen/margin8"
+                android:id="@+id/tab_icon"
+                android:layout_margin="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"/>
+
+        <ImageView
+                android:id="@+id/app_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/margin4"
+                android:gravity="center"
+                android:padding="4dp"
+               android:src="@drawable/blub_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

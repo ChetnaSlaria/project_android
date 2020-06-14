@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+android:layout_margin="@dimen/margin4">
+<TextView android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Sky Diving"
+          android:gravity="center"
+          android:textSize="@dimen/text14"
+          android:textColor="@color/colorWhite"
+          android:paddingStart="@dimen/margin12"
+          android:paddingEnd="@dimen/margin12"
+          android:paddingTop="@dimen/margin8"
+          android:paddingBottom="@dimen/margin8"
+android:background="@drawable/btn_bg"
+android:backgroundTint="@color/colorPrimary"
+          android:id="@+id/interest_name"
+/>
+</LinearLayout>

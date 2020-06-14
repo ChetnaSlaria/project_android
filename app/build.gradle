@@ -1,0 +1,134 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+android {
+  /*  signingConfigs {
+
+        release {
+            storeFile file('/media/gurwinder/New Volume/Android Projects/dating-app/key.jks')
+            storePassword 'Sachtech@123'
+            keyAlias = 'Sachtech@123'
+            keyPassword 'Sachtech@123'
+        }
+    }*/
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.sachtech.datingapp"
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 5
+        versionName "1.4"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        signingConfig signingConfigs.release
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+   /* compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }*/
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+        }
+        /*debug{
+            minifyEnabled true
+        }*/
+
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation project(':base')
+
+    implementation 'com.hbb20:ccp:2.2.9'
+    implementation 'com.mukesh:otpview:1.0.1'
+    implementation "com.yuyakaido.android:card-stack-view:2.3.2"
+
+    //Glide
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    
+    implementation 'com.etebarian:meow-bottom-navigation:1.0.4'
+    implementation 'com.xiaofeng.android:flowlayoutmanager:1.2.3.2'
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation 'io.alterac.blurkit:blurkit:1.1.0'
+    implementation 'com.google.android:flexbox:1.1.0'
+
+
+    implementation 'com.l4digital.fastscroll:fastscroll:2.0.1'
+    //google
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+
+    //Facebook
+    implementation 'com.facebook.android:facebook-login:[5,6)'
+
+    //Firebase
+    implementation 'com.google.firebase:firebase-core:17.1.0'
+    implementation 'com.google.firebase:firebase-auth:19.0.0'
+    implementation 'com.google.firebase:firebase-core:17.1.0'
+    implementation 'com.google.firebase:firebase-firestore:21.0.0'
+    implementation 'com.google.firebase:firebase-storage:19.0.0'
+    implementation 'com.google.firebase:firebase-database:19.0.0'
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'
+
+    //CometChatAuthentication
+   // implementation 'com.cometchat:pro-android-chat-sdk:1.8.+'
+    implementation 'com.cometchat:pro-android-chat-sdk:2.0.3'
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.1'
+
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+
+    implementation "com.hendraanggrian.appcompat:countrypicker:0.2"
+    implementation "com.hendraanggrian.appcompat:countrypicker-sheet:0.2"
+    implementation 'jp.wasabeef:blurry:3.0.0'
+    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
+    implementation 'com.github.florent37:kotlinpleaseanimate:1.0.2'
+
+    compile('com.crashlytics.sdk.android:crashlytics:2.10.1@aar') {
+        transitive = true
+    }
+
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    implementation 'com.android.billingclient:billing:1.2'
+
+
+    implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
+}
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MrGurtekBase</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_ok">OK</string>
+</resources>

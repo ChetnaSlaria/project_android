@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/header"
+            android:elevation="@dimen/margin8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/tab_icons"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:id="@+id/tab_icon"
+                android:layout_margin="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"/>
+
+        <ImageView
+                android:id="@+id/app_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/margin4"
+                android:gravity="center"
+                android:padding="4dp"
+                android:src="@drawable/blub_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/textColor"
+            app:tabTextColor="@color/textColorLight">
+
+        <com.google.android.material.tabs.TabItem
+                android:id="@+id/explore_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Likes" />
+
+        <com.google.android.material.tabs.TabItem
+                android:id="@+id/explore_visitors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visitors" />
+
+        <com.google.android.material.tabs.TabItem
+                android:id="@+id/explore_liked_by_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Liked by Me" />
+
+        <com.google.android.material.tabs.TabItem
+                android:id="@+id/explore_not_intersted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not Interested" />
+
+        <com.google.android.material.tabs.TabItem
+                android:id="@+id/explore_blocked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blocked" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <FrameLayout
+            android:id="@+id/exploreView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin8"/>
+
+</LinearLayout>

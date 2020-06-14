@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/margin8"
+>
+    <LinearLayout
+            android:id="@+id/receiver_message"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_margin="@dimen/margin4"
+            android:background="@drawable/message_bg">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/message_bg"
+                  android:backgroundTint="@color/color"
+                  android:paddingTop="8dp"
+                  android:paddingEnd="@dimen/margin12"
+                  android:paddingBottom="@dimen/margin8"
+                  android:paddingStart="@dimen/margin12"
+                  android:text="receiver"
+                  android:textSize="16sp"
+                  android:id="@+id/receiver_message_text"
+                  android:textColor="@color/colorWhiteLight"
+                 />
+
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/sender_message"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/margin4"
+            android:background="@drawable/message_bg">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:backgroundTint="@color/color"
+                  android:paddingTop="8dp"
+                  android:paddingEnd="@dimen/margin12"
+                  android:paddingBottom="@dimen/margin8"
+                  android:paddingStart="@dimen/margin12"
+                  android:text="sender"
+                  android:id="@+id/sender_message_text"
+                  android:textSize="16sp"
+                  android:textColor="@color/textColorDark"
+
+                 />
+
+    </LinearLayout>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:backgroundTint="@color/color"
+                  android:text="sender"
+                  android:layout_gravity="center"
+                  android:id="@+id/call_status"
+                  android:textSize="16sp"
+                  android:textColor="@color/textColorLight"
+                  android:layout_margin="@dimen/margin4"
+                 />
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin8"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+            <com.makeramen.roundedimageview.RoundedImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:src="@drawable/girl4"
+                    android:scaleType="centerCrop"
+
+                    app:riv_mutate_background="true"
+                    app:riv_tile_mode="repeat"
+                    android:id="@+id/message_user_image_liked_by_me"
+                    app:riv_corner_radius="@dimen/_4sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin16"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sf_regular"
+                    android:text="Username"
+                    android:id="@+id/liked_by_me_user"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text16" />
+        </LinearLayout>

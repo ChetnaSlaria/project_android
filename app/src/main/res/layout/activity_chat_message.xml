@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chatView"
+            android:orientation="vertical"
+            android:background="@drawable/bg1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <View android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                style="@style/TopView"
+                android:id="@+id/view"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                android:padding="@dimen/margin8"
+                android:layout_marginTop="@dimen/margin24"
+                android:layout_marginStart="@dimen/margin4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/view"
+                android:id="@+id/chat_back"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/user"
+                android:id="@+id/chat_user_image"
+                android:layout_marginStart="@dimen/margin4"
+                app:layout_constraintTop_toTopOf="@id/chat_back"
+                app:layout_constraintBottom_toBottomOf="@id/chat_back"
+                app:layout_constraintStart_toEndOf="@id/chat_back"/>
+
+       <!-- <ImageView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/online_dot"
+                app:layout_constraintEnd_toEndOf="@id/chat_user_image"
+                app:layout_constraintBottom_toBottomOf="@id/chat_user_image"/>
+-->
+        <ImageView
+                android:id="@+id/options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/ic_options"
+                app:layout_constraintBottom_toBottomOf="@id/chat_user_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/chat_user_image" />
+
+<ImageView
+        android:id="@+id/audioCall"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:padding="@dimen/margin8"
+        android:src="@drawable/audio_call"
+        android:tint="@color/colorWhite"
+        android:layout_marginEnd="@dimen/margin8"
+        app:layout_constraintEnd_toStartOf="@id/options"
+        app:layout_constraintTop_toTopOf="@id/options"
+        app:layout_constraintBottom_toBottomOf="@id/options"
+        />
+        <ImageView
+                android:id="@+id/videoCall"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:padding="@dimen/margin8"
+        android:src="@drawable/video_call"
+                android:tint="@color/colorWhite"
+        android:layout_marginEnd="@dimen/margin8"
+        app:layout_constraintEnd_toStartOf="@id/audioCall"
+        app:layout_constraintTop_toTopOf="@id/audioCall"
+        app:layout_constraintBottom_toBottomOf="@id/audioCall"
+        />
+        <!-- View Profile, Unlike, Unblur your pics, Report and Block-->
+
+        <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quiche"
+                android:id="@+id/chat_user_name"
+                android:textSize="@dimen/text16"
+                android:layout_marginStart="@dimen/margin12"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/sf_semibold"
+                app:layout_constraintBottom_toBottomOf="@id/chat_user_image"
+                app:layout_constraintStart_toEndOf="@id/chat_user_image"
+                app:layout_constraintTop_toTopOf="@id/chat_user_image"/>
+        <LinearLayout
+                android:id="@+id/request_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/chat_message_rv"
+                app:layout_constraintTop_toBottomOf="@id/chat_user_image">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="User wants to send a message"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/userName"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/accept"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin8"
+                        android:layout_marginEnd="@dimen/margin16"
+                        android:background="@drawable/btn_bg"
+                        android:backgroundTint="@color/green_600"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="ACCEPT"
+                        android:textColor="@color/colorWhite"
+                        app:layout_constraintEnd_toStartOf="@id/decline"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                        android:id="@+id/decline"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="@dimen/margin8"
+                        android:background="@drawable/btn_bg"
+                        android:backgroundTint="@color/red_600"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="DECLINE"
+                        android:textColor="@color/colorWhite"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/accept"
+                        app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:elevation="@dimen/margin8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="@dimen/margin4"
+                android:gravity="center"
+                android:id="@+id/bottom"
+                android:layout_margin="@dimen/margin16"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/colorWhite">
+
+          <!--  <ImageView android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/clip"
+                    android:layout_weight="0.4"/>-->
+
+            <EditText android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:inputType="text"
+                    android:padding="@dimen/margin4"
+                    android:hint="Type a Message"
+                    android:background="@null"
+                    android:id="@+id/message_edit"/>
+
+            <ImageView android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:padding="@dimen/margin8"
+                    android:layout_weight="0.5"
+                    android:src="@drawable/send"
+                    android:id="@+id/message_send"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+                android:id="@+id/request_pendingView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/chat_message_rv"
+                app:layout_constraintTop_toBottomOf="@id/chat_user_image">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Your request is pending"
+                    android:textColor="@color/colorWhite" />
+
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin8"
+                app:layout_constraintTop_toBottomOf="@id/view"
+                app:layout_constraintBottom_toTopOf="@id/bottom"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:id="@+id/chat_message_rv"/>
+
+        <LinearLayout
+                android:id="@+id/option_layout"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhiteLight"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/options"
+                app:layout_constraintTop_toBottomOf="@id/options">
+
+            <TextView
+                    android:id="@+id/view_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:gravity="start"
+                    android:padding="8dp"
+                    android:text="View Profile"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+            <TextView
+                    android:id="@+id/unlike"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:gravity="start"
+                    android:padding="8dp"
+                    android:text="Unlike"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+          <!--  <TextView
+                    android:id="@+id/unblur"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:gravity="start"
+                    android:padding="8dp"
+                    android:text="Unblur your pics"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />-->
+
+            <TextView
+                    android:id="@+id/report"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:gravity="start"
+                    android:padding="8dp"
+                    android:text="Report"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+            <TextView
+                    android:id="@+id/block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:gravity="start"
+                    android:padding="8dp"
+                    android:text="Block"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+        </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

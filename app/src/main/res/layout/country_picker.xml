@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/countrypicker_searchbar_height"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin16"
+            android:layout_marginLeft="@dimen/margin16"
+            android:layout_marginTop="@dimen/margin8"
+            android:layout_marginEnd="@dimen/margin16"
+            android:layout_marginRight="@dimen/margin16"
+            app:cardCornerRadius="8dp">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentInsetLeft="-8dp"
+                app:contentInsetStart="-8dp">
+
+            <androidx.appcompat.widget.SearchBar
+                    android:id="@+id/searchBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless"
+                    app:defaultQueryHint="Search country"
+                    app:iconifiedByDefault="false" />
+        </androidx.appcompat.widget.Toolbar>
+    </androidx.cardview.widget.CardView>
+
+    <com.l4digital.fastscroll.FastScrollRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/cardView"
+            android:layout_above="@id/country_update"
+            app:bubbleColor="@color/colorAccent"
+            app:bubbleTextColor="?android:windowBackground"
+            app:handleColor="@color/colorAccent"
+            app:hideScrollbar="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <TextView
+            android:id="@+id/country_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPDATE"
+            android:textSize="@dimen/text18"
+            android:textColor="@color/colorPrimary"
+            android:layout_margin="@dimen/margin16"
+            android:elevation="@dimen/margin8"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+</RelativeLayout>

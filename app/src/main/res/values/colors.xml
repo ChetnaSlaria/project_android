@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#201932</color>
+    <color name="colorPrimaryDark">#151220</color>
+    <color name="colorAccent">#6B4EE6</color>
+    <color name="colorBlueDark">#475a95</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlackTransaparent">#A6000000</color>
+    <color name="colorGrey">#6D6A6A</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorWhiteLight">#F5F5F5</color>
+    <color name="textColorDark">#4a5b6f</color>
+    <color name="textColorLight">#9ea7ae</color>
+    <color name="textColor">#ebedff</color>
+    <color name="colorRed">#E60B29</color>
+    <color name="red_600">#E53935</color>
+    <color name="green_600">#43A047</color>
+    <color name="colorDarkBg">#191325</color>
+    <color name="colorLightBg">#281E3D</color>
+    <color name="colorLightBgOpaque">#11281E3D</color>
+    <color name="color">#201932</color>
+    <color name="purple_light">#9966ff</color>
+    <color name="light_green">#00cc66</color>
+    <color name="btn_color1">#F91E7B</color>
+    <color name="btn_color2">#FC5F2A</color>
+    <color name="colorGreen">#07B71F</color>
+    <color name="colorOrange">#EB7D29</color>
+    <color name="colorPurple">#EB29E5</color>
+    <color name="colorSkyBlue">#29EBD7</color>
+    <color name="colorYellow">#EBB129</color>
+    <color name="colorLightYellow">#C5EB29</color>
+    <color name="selected1">#26B5EC</color>
+    <color name="selected2">#125A76</color>
+</resources>
+

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_8sdp"
+        app:cardCornerRadius="@dimen/_16sdp">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            android:orientation="vertical">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirmation"
+                android:gravity="center"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/colorBlack"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/colorBlack"
+                android:text="Are you sure you want to delete your account?You can't revert this"/>
+
+   <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_margin="@dimen/_8sdp"
+           >
+       <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/edit_bg"
+               android:text="Yes"
+               android:id="@+id/yes"
+               android:paddingStart="@dimen/_16sdp"
+               android:paddingEnd="@dimen/_16sdp"
+               android:paddingTop="@dimen/_4sdp"
+               android:layout_margin="@dimen/_8sdp"
+               android:paddingBottom="@dimen/_4sdp"
+               android:drawableLeft="@drawable/yes"
+               android:drawablePadding="@dimen/_8sdp"
+               android:textSize="@dimen/_14sdp"
+               android:textColor="@color/colorGreen"/>
+       <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/edit_bg"
+               android:text="No"
+               android:id="@+id/no"
+               android:layout_margin="@dimen/_8sdp"
+               android:paddingStart="@dimen/_16sdp"
+               android:paddingEnd="@dimen/_16sdp"
+               android:paddingTop="@dimen/_4sdp"
+               android:paddingBottom="@dimen/_4sdp"
+               android:drawableLeft="@drawable/no"
+               android:drawablePadding="@dimen/_8sdp"
+               android:textSize="@dimen/_14sdp"
+               android:textColor="@color/colorRed"/>
+   </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+</LinearLayout>

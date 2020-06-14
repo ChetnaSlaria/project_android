@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <View
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_semibold"
+            android:text="Verify It's Really You.."
+            android:textColor="@color/textColorLight"
+            android:textSize="@dimen/text18"
+            app:layout_constraintBottom_toBottomOf="@id/top"
+            app:layout_constraintEnd_toEndOf="@id/top"
+            app:layout_constraintStart_toStartOf="@id/top"
+            app:layout_constraintTop_toTopOf="@id/top" />
+
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_semibold"
+            android:gravity="center"
+            android:text="Take a Selfie to verify that It's really you.."
+            android:textColor="@color/textColorLight"
+            android:textSize="@dimen/text18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top" />
+
+    <ImageView
+            android:id="@+id/verify_camera"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="@dimen/margin8"
+            android:src="@drawable/camera_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/verification_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin8"
+            android:fontFamily="@font/sf_regular"
+            android:padding="@dimen/margin8"
+            android:text="Done"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <LinearLayout
+            android:id="@+id/image_layout"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+                android:id="@+id/verification_image"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@drawable/girl12"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintStart_toStartOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/view" />
+
+        <TextView
+                android:id="@+id/change_verify_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/margin8"
+                android:text="Change Image"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text16"
+                app:layout_constraintBottom_toBottomOf="@id/view"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintStart_toStartOf="@id/view"
+                app:layout_constraintTop_toBottomOf="@id/verification_image" />
+    </LinearLayout>
+
+    <Switch
+            android:id="@+id/private_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Make Picture Private      "
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toTopOf="@id/verification_done"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

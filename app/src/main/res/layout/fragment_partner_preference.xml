@@ -1,0 +1,724 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg1">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/margin16">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                     android:layout_centerVertical="true"
+                        android:fontFamily="@font/sf_semibold"
+                        android:text="Preferences"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text18" />
+
+
+          <ImageView
+                  android:id="@+id/prefCancel"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/ic_clear_white"
+                  android:layout_margin="@dimen/_8sdp"
+                  android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin20"
+                    android:fontFamily="@font/sf_semibold"
+                    android:padding="@dimen/_2sdp"
+                    android:text="Name"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text14" />
+
+            <EditText
+                    android:id="@+id/pref_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorGrey"
+                    android:background="@drawable/card_back"
+                    android:drawableLeft="@drawable/name"
+                    android:padding="@dimen/margin8" />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/sf_semibold"
+                    android:padding="@dimen/_2sdp"
+                    android:text="Age Range"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text14" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp">
+
+
+                <EditText
+                        android:id="@+id/pref_minAge"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin4"
+                        android:layout_marginBottom="@dimen/margin4"
+                        android:background="@drawable/edit_bg"
+                        android:drawableLeft="@drawable/age_min"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:hint="18"
+                        android:gravity="center"
+                        android:textColorHint="@color/colorGrey"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:padding="@dimen/margin8"
+                        android:textColor="@color/colorWhite"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/pref_maxAge"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <EditText
+                        android:id="@+id/pref_maxAge"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin16"
+                        android:layout_marginEnd="@dimen/margin4"
+                        android:layout_marginBottom="@dimen/margin4"
+                        android:background="@drawable/edit_bg"
+                        android:drawableLeft="@drawable/age_max"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:hint="99"
+                        android:gravity="center"
+                        android:textColorHint="@color/colorGrey"
+                        android:textColor="@color/colorWhite"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:padding="@dimen/margin8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/pref_minAge" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/sf_semibold"
+                    android:padding="@dimen/_2sdp"
+                    android:text="Nationality"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text14" />
+
+            <TextView
+                    android:id="@+id/pref_nationality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/card_back"
+                    android:drawableLeft="@drawable/nationality"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:fontFamily="@font/sf_semibold"
+                    android:padding="@dimen/_6sdp"
+                    android:textColor="@color/textColorLight"
+                    android:textSize="@dimen/text14" />
+
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/sf_semibold"
+                    android:padding="@dimen/_2sdp"
+                    android:text="Origin"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text14" />
+
+            <TextView
+                    android:id="@+id/pref_origin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/card_back"
+                    android:drawableLeft="@drawable/origion"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:fontFamily="@font/sf_semibold"
+                    android:padding="@dimen/_6sdp"
+                    android:textColor="@color/textColorLight"
+                    android:textSize="@dimen/text14" />
+
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/sf_semibold"
+                    android:padding="@dimen/_2sdp"
+                    android:text="Language"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text14" />
+
+            <TextView
+                    android:id="@+id/pref_languages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/card_back"
+                    android:drawableLeft="@drawable/langues"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:padding="@dimen/_6sdp"
+                   android:text="English"
+                    android:textColor="@color/textColorLight"
+                    android:textSize="@dimen/text14" />
+
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/sf_semibold"
+                    android:padding="@dimen/_2sdp"
+                    android:text="Sect"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text14" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/caste_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" />
+
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/sf_semibold"
+                    android:padding="@dimen/_2sdp"
+                    android:text="Marital Status"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text14" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/marital_status_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" />
+
+            <TextView
+                    android:id="@+id/living_arrangement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/sf_semibold"
+                    android:padding="@dimen/_2sdp"
+                    android:text="Current Living Arrangements"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text14" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/living_arrangement_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" />
+
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_semibold"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:text="Height"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text14" />
+
+            <EditText
+                    android:id="@+id/pref_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:drawableLeft="@drawable/height"
+                    android:padding="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text14"
+                    android:background="@drawable/card_back"
+                    android:maxLength="3"
+                    android:textColorHint="@color/colorGrey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+
+    <!--    <SeekBar
+                android:id="@+id/height_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin8"
+                android:max="230"
+                android:progress="140"
+                android:thumb="@drawable/seek"
+                android:thumbTint="@color/selected1"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/edit_height" />
+-->
+        <LinearLayout
+                android:padding="@dimen/_16sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_semibold"
+                    android:text="Build"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text14"
+                    app:layout_constraintBaseline_toBaselineOf="@id/edit_build"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/build_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" />
+
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/sf_semibold"
+                    android:text="Complexion"
+                    android:padding="@dimen/_2sdp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text14" />
+
+            <TextView
+                    android:id="@+id/pref_complexion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/card_back"
+                    android:drawableLeft="@drawable/complexion"
+                    android:drawablePadding="@dimen/margin4"
+                    android:padding="4dp"
+                    android:textColor="@color/textColorLight"
+                    android:textSize="@dimen/text14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/build_bar" />
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_semibold"
+                        android:padding="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:text="Eye Color"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_eyes_color"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:id="@+id/pref_eyes_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/margin4"
+                        android:drawableLeft="@drawable/eye"
+                        android:background="@drawable/card_back"
+                        android:entries="@array/eyeColor"
+                        android:padding="@dimen/margin4"
+                        android:textColor="@color/textColorLight"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/edit_complexion" />
+
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_semibold"
+                        android:text="Hair Color"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text14" />
+
+                <TextView
+                        android:id="@+id/pref_hair_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/margin4"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:drawableLeft="@drawable/hair"
+                        android:background="@drawable/card_back"
+                        android:entries="@array/hairColor"
+                        android:padding="4dp"
+                        android:textColor="@color/textColorLight"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/edit_eyes_color" />
+
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_semibold"
+                        android:padding="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:text="Education"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text14" />
+
+                <TextView
+                        android:id="@+id/pref_education"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:drawableLeft="@drawable/education"
+                        android:background="@drawable/card_back"
+                        android:textColor="@color/colorWhite"
+                        android:padding="@dimen/margin4"
+                        android:textSize="@dimen/text14" />
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_semibold"
+                        android:padding="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:text="Profession"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text14" />
+
+                <TextView
+                        android:id="@+id/pref_profession"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:drawableLeft="@drawable/profession"
+                        android:background="@drawable/card_back"
+                        android:textColor="@color/colorWhite"
+                        android:hint="Job Title"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:textColorHint="@color/colorGrey"
+                        android:textSize="@dimen/text14" />
+
+
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_semibold"
+                        android:padding="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:text="Marriage Plans"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text14" />
+            <TextView
+                    android:id="@+id/pref_marriage_plans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/card_back"
+                    android:drawableLeft="@drawable/marriage"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:padding="@dimen/_6sdp"
+                   
+                    android:textColor="@color/textColorLight"
+                    android:textSize="@dimen/text14" />
+
+            <!--<androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/marriage_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"/>-->
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_semibold"
+                        android:text="Living Arrangements After Marriage"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text14"
+                        android:padding="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/edit_lifeaftermarriage" />
+            <TextView
+                    android:id="@+id/pref_living_after_marriage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/card_back"
+                    android:drawableLeft="@drawable/living"
+                   
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:padding="@dimen/_6sdp"
+                   
+                    android:textColor="@color/textColorLight"
+                    android:textSize="@dimen/text14" />
+
+
+          <!--  <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/life_after_marriage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" />-->
+
+
+                <TextView
+                        android:id="@+id/text_wear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:fontFamily="@font/sf_semibold"
+                        android:padding="@dimen/_2sdp"
+                        android:text="Wears"
+                        android:textColor="@color/colorWhiteLight"
+                        android:textSize="@dimen/text14" />
+            <TextView
+                    android:id="@+id/pref_wear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/card_back"
+                    android:drawableLeft="@drawable/wears"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:padding="@dimen/_6sdp"
+                   
+                    android:textColor="@color/textColorLight"
+                    android:textSize="@dimen/text14" />
+
+              <!--  <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/wear_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="2" />-->
+
+
+                <TextView
+                        android:id="@+id/text_beard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_semibold"
+                        android:text="Beard"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text14" />
+            <TextView
+                    android:id="@+id/pref_beard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/card_back"
+                    android:drawableLeft="@drawable/beard"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:padding="@dimen/_6sdp"
+                   
+                    android:textColor="@color/textColorLight"
+                    android:textSize="@dimen/text14" />
+
+                <!--<androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/beard_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="2" />-->
+
+
+
+                <TextView
+                        android:id="@+id/text_revert"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_semibold"
+                        android:text="Revert"
+                        android:padding="@dimen/_2sdp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text14" />
+            <TextView
+                    android:id="@+id/pref_revert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/card_back"
+                    android:drawableLeft="@drawable/revert"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:padding="@dimen/_6sdp"
+                   
+                    android:textColor="@color/textColorLight"
+                    android:textSize="@dimen/text14" />
+
+              <!--  <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/revert_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="2" />-->
+
+
+
+
+                <TextView
+                        android:id="@+id/text_halal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_semibold"
+                        android:text="Halal"
+                        android:padding="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text14"
+                        app:layout_constraintBottom_toBottomOf="@id/halal_radio_group"
+                        app:layout_constraintStart_toStartOf="@id/text_wear"
+                        app:layout_constraintTop_toTopOf="@id/halal_radio_group" />
+            <TextView
+                    android:id="@+id/pref_halal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/card_back"
+                    android:drawableLeft="@drawable/halal"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:padding="@dimen/_6sdp"
+                   
+                    android:textColor="@color/textColorLight"
+                    android:textSize="@dimen/text14" />
+
+                <!--<androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/halal_radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="2" />-->
+
+                <TextView
+                        android:id="@+id/text_prays"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_semibold"
+                        android:padding="@dimen/margin8"
+                        android:text="Prays"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text14" />
+            <TextView
+                    android:id="@+id/pref_prays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/card_back"
+                    android:drawableLeft="@drawable/prays"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:padding="@dimen/_6sdp"
+                   
+                    android:textColor="@color/textColorLight"
+                    android:textSize="@dimen/text14" />
+
+         <!--       <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/prays_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="2" />-->
+
+                <TextView
+                        android:id="@+id/text_quran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:fontFamily="@font/sf_semibold"
+                        android:text="Completed Quran"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text14"/>
+            <TextView
+                    android:id="@+id/pref_quran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/card_back"
+                    android:drawableLeft="@drawable/quran"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:padding="@dimen/_6sdp"
+                   
+                    android:textColor="@color/textColorLight"
+                    android:textSize="@dimen/text14" />
+
+               <!-- <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/quran_radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="2" />-->
+            <TextView
+                    android:id="@+id/preference_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                 android:layout_margin="@dimen/_16sdp"
+                    android:background="@drawable/btn_bg"
+                    android:fontFamily="@font/sf_semibold"
+                    android:paddingStart="@dimen/_24sdp"
+                    android:paddingTop="@dimen/margin4"
+                    android:paddingEnd="@dimen/_24sdp"
+                    android:paddingBottom="@dimen/margin4"
+                    android:text="Done"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text14" />
+            
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
